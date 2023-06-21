@@ -41,7 +41,7 @@ function(target_linuxdeploy)
     add_custom_target(linuxdeploy pwd
         BYPRODUCTS appimage
         COMMAND cp ../${PROJECT_NAME} .
-        COMMAND "${LINUXDEPLOYQT}" ${PROJECT_NAME} -appimage -unsupported-allow-new-glibc -verbose=3 -no-strip|| true
+        COMMAND "${LINUXDEPLOYQT}" ${PROJECT_NAME} --appimage-extract-and-run -appimage -unsupported-allow-new-glibc -verbose=3 -no-strip|| true
         COMMAND cp ../spark-appimage.desktop default.desktop
         COMMAND cp ../spark-appimage.png     default.png
         WORKING_DIRECTORY "${APPIMAGE_OUTPUT}")
