@@ -22,6 +22,7 @@ jobs:
     
     # install dependencies
     - run: sudo apt-get update -y
+    - run: sudo apt-get install -y base-files
     - run: sudo apt-get install -y build-essential g++ make cmake 
     - run: sudo apt-get install -y build-essential tree lsb-release
     - run: sudo apt-get install -y qtbase5-dev qtbase5-dev-tools libqt5printsupport5 libqt5xmlpatterns5-dev
