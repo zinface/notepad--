@@ -53,7 +53,7 @@ function(target_appimage)
         COMMAND cp ../spark-appimage.png     default.png
         WORKING_DIRECTORY "${APPIMAGE_OUTPUT}")
     add_custom_target(appimage pwd
-        COMMAND ${APPIMAGETOOL} ${APPIMAGE_OUTPUT}
+        COMMAND ${APPIMAGETOOL} ${APPIMAGE_OUTPUT} --appimage-extract-and-run
         WORKING_DIRECTORY "${CMAKE_BINARY_DIR}"
         DEPENDS copy-desktop-appimage)
 endfunction(target_appimage)
